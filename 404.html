@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#030b0d">
+<meta name="robots" content="noindex">
+<title>QEVANTIS — Sayfa bulunamadı</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+:root{
+  --bg:#030b0d;--bg-2:#06110f;--panel:#071815;--panel-2:#0a201b;--line:#183b31;
+  --line-soft:rgba(137,211,155,.15);--lime:#b9f33d;--green:#48e58d;--purple:#b68cff;
+  --text:#f4f7f4;--muted:#8fa59b;--muted-2:#6e837a;--warning:#ffcf66;
+  --shadow:0 24px 70px rgba(0,0,0,.32);--radius:22px;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);color-scheme:dark;scroll-behavior:smooth}
+body{
+  margin:0;color:var(--text);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 61% 8%,rgba(52,123,90,.16),transparent 34%),
+    radial-gradient(circle at 20% 78%,rgba(91,224,132,.07),transparent 30%),var(--bg);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);
+  background:rgba(3,11,13,.78);border-bottom:1px solid var(--line-soft)}
+.nav-in{display:flex;align-items:center;gap:28px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;font-size:15px;text-decoration:none}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px rgba(185,243,61,.7)}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:14px;color:var(--muted)}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--text)}
+.btn{display:inline-block;border-radius:999px;padding:11px 20px;font-size:14px;font-weight:600;
+  text-decoration:none;border:1px solid transparent;transition:.18s}
+.btn-primary{background:var(--lime);color:#06170a}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:rgba(255,255,255,.02)}
+.btn-ghost:hover{border-color:var(--green)}
+@media(max-width:840px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding:86px 0 64px}
+.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);
+  background:rgba(72,229,141,.06);color:var(--green);border-radius:999px;
+  padding:7px 15px;font-size:12.5px;letter-spacing:.03em}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.1;letter-spacing:-.02em;margin:24px 0 0;max-width:16ch}
+h1 em{font-style:normal;color:var(--lime)}
+.lede{font-size:clamp(16px,2.1vw,19.5px);color:var(--muted);max-width:60ch;margin:22px 0 0}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-note{margin-top:18px;font-size:13.5px;color:var(--muted-2)}
+
+/* generic section */
+section{padding:64px 0;border-top:1px solid var(--line-soft);scroll-margin-top:78px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);margin:0 0 12px}
+h2{font-size:clamp(24px,3.4vw,34px);line-height:1.2;letter-spacing:-.015em;margin:0 0 16px;max-width:22ch}
+.sub{color:var(--muted);max-width:66ch;margin:0}
+p{margin:0 0 16px}
+
+.grid{display:grid;gap:18px;margin-top:34px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:880px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 10px;font-size:17.5px;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:14.6px;margin:0}
+.mark{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;margin-bottom:16px;
+  background:rgba(185,243,61,.1);border:1px solid rgba(185,243,61,.25);color:var(--lime);font-size:15px}
+
+/* problem/solution split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+@media(max-width:880px){.split{grid-template-columns:1fr}}
+.split .card.bad{border-color:rgba(255,123,123,.22)}
+.split .card.bad h3{color:#ff9b9b}
+.split .card.good h3{color:var(--green)}
+ul.clean{list-style:none;margin:14px 0 0;padding:0;color:var(--muted);font-size:14.6px}
+ul.clean li{position:relative;padding-left:20px;margin-bottom:9px}
+ul.clean li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+ul.clean.neg li:before{background:#ff7b7b}
+
+/* mimari semasi */
+.arch{margin-top:34px;background:linear-gradient(180deg,var(--panel),var(--panel-2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.arch svg{width:100%;height:auto;display:block}
+.arch-note{margin:18px 0 0;color:var(--muted);font-size:14.4px}
+.steps{counter-reset:s;list-style:none;margin:34px 0 0;padding:0;display:grid;gap:14px}
+.steps li{position:relative;padding:18px 20px 18px 62px;border:1px solid var(--line);
+  border-radius:16px;background:rgba(7,24,21,.55);color:var(--muted);font-size:14.8px}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:17px;
+  width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:700;
+  background:rgba(185,243,61,.12);border:1px solid rgba(185,243,61,.3);color:var(--lime)}
+.steps b{color:var(--text);display:block;margin-bottom:3px;font-size:15.4px;font-weight:600}
+
+/* SSS */
+.faq{margin-top:30px;border-top:1px solid var(--line-soft)}
+.faq details{border-bottom:1px solid var(--line-soft)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;
+  font-size:16px;font-weight:600;color:var(--text)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:6px;top:16px;font-size:22px;
+  font-weight:400;color:var(--green);transition:transform .18s}
+.faq details[open] summary:after{content:"\2212"}
+.faq summary:hover{color:var(--lime)}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:14.9px;max-width:70ch}
+.faq .ans p{margin:0 0 12px}
+.faq .ans p:last-child{margin:0}
+
+/* status table */
+table{width:100%;border-collapse:collapse;margin-top:28px;font-size:14.4px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{color:var(--muted-2);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+td:first-child{color:var(--text)}
+td:nth-child(2),td:nth-child(3){color:var(--muted)}
+.tag{display:inline-block;border-radius:999px;padding:3px 11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.t-p{background:rgba(72,229,141,.14);color:var(--green);border:1px solid rgba(72,229,141,.3)}
+.t-b{background:rgba(185,243,61,.12);color:var(--lime);border:1px solid rgba(185,243,61,.28)}
+.t-a{background:rgba(255,207,102,.12);color:var(--warning);border:1px solid rgba(255,207,102,.3)}
+.t-n{background:rgba(182,140,255,.12);color:var(--purple);border:1px solid rgba(182,140,255,.3)}
+
+/* metrics */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}
+@media(max-width:880px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:16px;padding:20px}
+.metric b{display:block;font-size:27px;letter-spacing:-.02em;color:var(--lime);font-weight:700;line-height:1.1}
+.metric span{display:block;color:var(--muted-2);font-size:13px;margin-top:7px}
+
+/* beta box */
+.beta{background:linear-gradient(150deg,rgba(72,229,141,.1),rgba(3,11,13,0) 62%),var(--panel);
+  border:1px solid rgba(72,229,141,.28);border-radius:var(--radius);padding:38px;margin-top:34px}
+.beta h3{margin:0 0 12px;font-size:22px}
+.beta p{color:var(--muted);max-width:62ch}
+
+.callout{border-left:2px solid var(--warning);background:rgba(255,207,102,.05);
+  padding:16px 20px;border-radius:0 12px 12px 0;color:var(--muted);font-size:14.4px;margin-top:26px}
+.callout b{color:var(--warning)}
+
+footer{border-top:1px solid var(--line-soft);padding:44px 0 60px;color:var(--muted-2);font-size:13.6px}
+.foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="/"><span class="dot"></span>QEVANTIS</a>
+  <a class="btn btn-ghost" style="margin-left:auto" href="/">Ana sayfa</a>
+</div></header>
+<main id="top"><div class="wrap hero">
+  <span class="pill">404</span>
+  <h1>Bu sayfa <em>burada değil</em>.</h1>
+  <p class="lede">Aradığınız adres taşınmış ya da hiç var olmamış olabilir. Ana sayfadan devam edebilirsiniz.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="/">Ana sayfa</a>
+    <a class="btn btn-ghost" href="/demo.html">Arayüzü gez →</a>
+  </div>
+</div></main>
+<footer><div class="wrap foot-in">
+  <div><div class="brand" style="margin-bottom:10px"><span class="dot"></span>QEVANTIS</div>
+    <div>Kendi sunucunuzda çalışan yapay zekâ çalışma alanı.</div></div>
+  <div><div><a href="/gizlilik.html">Gizlilik ve KVKK</a> · <a href="/kosullar.html">Kullanım şartları</a></div>
+    <div style="margin-top:8px"><a href="mailto:info@qevantis.com">İletişim</a></div>
+    <div style="margin-top:8px">© 2026 QEVANTIS</div></div>
+</div></footer>
+</body></html>

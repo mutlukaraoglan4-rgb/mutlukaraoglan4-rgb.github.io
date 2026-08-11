@@ -9,6 +9,19 @@
 <meta property="og:title" content="QEVANTIS — Verinizi dışarı çıkarmayan yapay zekâ çalışma alanı">
 <meta property="og:description" content="Kendi sunucunuzda çalışan; kurum bilgisini hatırlayan, belgelerinizle konuşan ve görevleri onayınızla yürüten bir yapay zekâ çalışma alanı.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://qevantis.com/">
+<meta property="og:site_name" content="QEVANTIS">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="https://qevantis.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="QEVANTIS — kendi sunucunuzda çalışan yapay zekâ çalışma alanı">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="QEVANTIS — Verinizi dışarı çıkarmayan yapay zekâ çalışma alanı">
+<meta name="twitter:description" content="Kendi sunucunuzda çalışan; kurum bilgisini hatırlayan, belgelerinizle konuşan ve görevleri onayınızla yürüten bir yapay zekâ çalışma alanı.">
+<meta name="twitter:image" content="https://qevantis.com/og.png">
+<link rel="canonical" href="https://qevantis.com/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <style>
 :root{
   --bg:#030b0d;--bg-2:#06110f;--panel:#071815;--panel-2:#0a201b;--line:#183b31;
@@ -86,6 +99,33 @@ ul.clean li{position:relative;padding-left:20px;margin-bottom:9px}
 ul.clean li:before{content:"";position:absolute;left:2px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--green)}
 ul.clean.neg li:before{background:#ff7b7b}
 
+/* mimari semasi */
+.arch{margin-top:34px;background:linear-gradient(180deg,var(--panel),var(--panel-2));
+  border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.arch svg{width:100%;height:auto;display:block}
+.arch-note{margin:18px 0 0;color:var(--muted);font-size:14.4px}
+.steps{counter-reset:s;list-style:none;margin:34px 0 0;padding:0;display:grid;gap:14px}
+.steps li{position:relative;padding:18px 20px 18px 62px;border:1px solid var(--line);
+  border-radius:16px;background:rgba(7,24,21,.55);color:var(--muted);font-size:14.8px}
+.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:20px;top:17px;
+  width:26px;height:26px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:700;
+  background:rgba(185,243,61,.12);border:1px solid rgba(185,243,61,.3);color:var(--lime)}
+.steps b{color:var(--text);display:block;margin-bottom:3px;font-size:15.4px;font-weight:600}
+
+/* SSS */
+.faq{margin-top:30px;border-top:1px solid var(--line-soft)}
+.faq details{border-bottom:1px solid var(--line-soft)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;
+  font-size:16px;font-weight:600;color:var(--text)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:6px;top:16px;font-size:22px;
+  font-weight:400;color:var(--green);transition:transform .18s}
+.faq details[open] summary:after{content:"\2212"}
+.faq summary:hover{color:var(--lime)}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:14.9px;max-width:70ch}
+.faq .ans p{margin:0 0 12px}
+.faq .ans p:last-child{margin:0}
+
 /* status table */
 table{width:100%;border-collapse:collapse;margin-top:28px;font-size:14.4px}
 th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top}
@@ -119,6 +159,118 @@ footer{border-top:1px solid var(--line-soft);padding:44px 0 60px;color:var(--mut
 .foot-in{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:flex-start}
 footer a{color:var(--muted)}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://qevantis.com/#org",
+   "name": "QEVANTIS",
+   "url": "https://qevantis.com/",
+   "logo": "https://qevantis.com/favicon.svg",
+   "email": "info@qevantis.com"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://qevantis.com/#site",
+   "url": "https://qevantis.com/",
+   "name": "QEVANTIS",
+   "inLanguage": "tr-TR",
+   "publisher": {
+    "@id": "https://qevantis.com/#org"
+   }
+  },
+  {
+   "@type": "SoftwareApplication",
+   "name": "QEVANTIS",
+   "applicationCategory": "BusinessApplication",
+   "operatingSystem": "Linux (konteyner)",
+   "softwareVersion": "1.1.0",
+   "description": "Kendi sunucunuzda çalışan, kurum bilgisini hatırlayan ve görevleri onayınızla yürüten yapay zekâ çalışma alanı.",
+   "url": "https://qevantis.com/",
+   "publisher": {
+    "@id": "https://qevantis.com/#org"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "TRY",
+    "description": "Kapalı beta ücretsizdir; davetle erişilir."
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Verilerim gerçekten dışarı çıkmıyor mu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Evet. Uygulama, veritabanı ve dil modeli sizin sunucunuzda çalışır; belgeleriniz ve sohbetleriniz o sunucudan ayrılmaz. Bize herhangi bir telemetri veya kullanım verisi göndermez. Tek istisna, sizin bilinçli olarak açtığınız dış özelliklerdir — örneğin web araması ya da dışarıdaki bir model API'si seçmeniz. Bunlar isteğe bağlıdır ve kapatılabilir; kapalıyken sistem internet erişimi olmayan bir ağda çalışır."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ne kadar donanım gerekiyor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Uygulamanın kendisi mütevazıdır: birkaç çekirdek ve 8 GB bellek küçük bir ekip için yeterlidir. Belirleyici olan, modeli nerede çalıştırdığınızdır. Modeli kendi sunucunuzda çalıştıracaksanız ekran kartı belleği asıl kısıttır; küçük modeller işlemcide de çalışır ama yanıtlar yavaşlar. Kurumsal bir çıkarım sunucusuna ya da uyumlu bir API'ye bağlanırsanız QEVANTIS'in çalıştığı makinenin gereksinimi düşer. Kesin rakamları kapalı beta ölçümlerinden sonra yayımlayacağız."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Hangi dil modelleri destekleniyor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mimari modelden bağımsızdır. Kendi sunucunuzda çalışan yerel modeller, kurumsal bir çıkarım sunucusu ya da uyumlu bir API — hangisini seçerseniz tek ayar değişir, uygulamanın kendisi aynı kalır. Model sağlayıcısını sonradan değiştirmek veri taşımayı gerektirmez."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "KVKK ve GDPR açısından ne sağlıyor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Veriyi kendi sunucunuzda tuttuğunuzda yurt dışına aktarım sorunu baştan ortadan kalkar; bu, bulut araçlarında en çok tıkanılan noktadır. Ürünün içinde ayrıca veri dışa aktarma, hesabın ve tüm verisinin kalıcı silinmesi, sürüm takipli açık rıza kaydı ve denetim günlüğü bulunur. Bunlar sonradan eklenmiş bir uyum katmanı değil, veri modelinin parçasıdır. Kurulumun kendi hukuki değerlendirmesi elbette sizin sorumluluğunuzdadır; gerekli teknik dayanağı sağlıyoruz. Şeffaflık için: beta süresince bizim işlettiğimiz deneme ortamı Almanya'daki sunucumuzda çalışıyor, dolayısıyla o ortamı kullanmak yurt dışına aktarım anlamına gelir. Kendi sunucunuza kurarsanız bu aktarım hiç doğmaz. Ayrıntısı gizlilik metninde."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kurulumu kim yapıyor, ne kadar sürüyor?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Konteyner tabanlı kurulum, sunucu yönetimine hâkim bir kişi için tek oturumda tamamlanacak şekilde tasarlandı; yazılı kurulum, yedekleme ve geri yükleme dokümanları veriliyor. Kurumsal lisansta kurulum ve destek paketi bizim tarafımızdan sağlanıyor. Kapalı beta katılımcıları isterse kendi sunucularına kurar, isterse bizim işlettiğimiz beta ortamını kullanır."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Fiyatı ne olacak?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kapalı beta ücretsizdir. Abonelik ve ödeme altyapısı üründe kodlanmış durumda ancak bilinçli olarak devreye alınmadı; rakamları beta sonrası gerçek kullanım verisiyle netleştireceğiz. Bireysel kullanım için ücretsiz bir katman kalıcı olarak açık kalacak."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ürün hangi olgunlukta? Üretimde kullanabilir miyim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hesap ve kimlik, çalışma alanı ve yetkilendirme, güvenlik ve yönetim tarafı üretim seviyesinde ve test edilmiş durumda. ELVIO sohbeti, bilgi getirimi, geliştirici API'si ve web uygulaması beta seviyesinde — çalışıyor, üzerinde iyileştirme sürüyor. Mobil uygulama alfa aşamasında. Yukarıdaki tabloda bunu olduğundan iyi göstermeden veriyoruz. Beta ortamına kaybı telafi edilemeyecek üretim verisi yüklemenizi bu aşamada önermiyoruz."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kaynak kodu açık mı?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hayır. QEVANTIS tescilli lisansla dağıtılan, kendi sunucunuza kurulan bir üründür. \"Kendi sunucunuzda çalışır\" ile \"açık kaynak\" farklı şeylerdir; biz birincisini taahhüt ediyoruz — veri sizin altyapınızda kalır."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -129,8 +281,10 @@ footer a{color:var(--muted)}
       <a href="#neden">Neden</a>
       <a href="#urun">Ürün</a>
       <a href="#durum">Durum</a>
+      <a href="#kurulum">Kurulum</a>
       <a href="#gelir">Model</a>
-      <a href="demo.html">Arayüz önizlemesi</a>
+      <a href="#sss">SSS</a>
+      <a href="demo.html">Demo</a>
     </nav>
     <a class="btn btn-primary" href="#beta">Kapalı betaya katıl</a>
   </div>
@@ -247,6 +401,95 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<section id="kurulum">
+  <div class="wrap">
+    <p class="eyebrow">Nasıl çalışır</p>
+    <h2>Tek bir sunucu, dışarı çıkmayan veri</h2>
+    <p class="sub">
+      QEVANTIS bir buluta bağlanan istemci değil, kendi başına çalışan bir sistemdir. Uygulama,
+      veritabanı ve dil modeli aynı sunucuda durur; kullanıcı da o sunucuya kendi ağından bağlanır.
+      Aşağıdaki şema kurulumun tamamını gösteriyor — dikkat edilmesi gereken şey, kutunun dışına
+      giden bir veri okunun olmaması.
+    </p>
+
+    <div class="arch">
+      <svg viewBox="0 0 960 340" role="img" aria-label="QEVANTIS kurulum şeması: kullanıcılar kurum ağından kendi sunucunuza bağlanır; uygulama, veritabanı ve model aynı sunucuda çalışır, veri dışarı çıkmaz.">
+        <defs>
+          <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#b9f33d"/><stop offset="1" stop-color="#48e58d"/>
+          </linearGradient>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#48e58d"/>
+          </marker>
+          <marker id="arx" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0,0 L10,5 L0,10 z" fill="#ff7b7b"/>
+          </marker>
+        </defs>
+
+        <!-- kullanicilar -->
+        <rect x="14" y="104" width="150" height="132" rx="16" fill="#0a201b" stroke="#183b31"/>
+        <text x="89" y="134" text-anchor="middle" fill="#f4f7f4" font-size="14" font-weight="600" font-family="system-ui,sans-serif">Ekip</text>
+        <text x="89" y="158" text-anchor="middle" fill="#8fa59b" font-size="11.5" font-family="system-ui,sans-serif">Tarayıcı</text>
+        <text x="89" y="176" text-anchor="middle" fill="#8fa59b" font-size="11.5" font-family="system-ui,sans-serif">Mobil uygulama</text>
+        <text x="89" y="194" text-anchor="middle" fill="#8fa59b" font-size="11.5" font-family="system-ui,sans-serif">API / MCP</text>
+        <text x="89" y="220" text-anchor="middle" fill="#6e837a" font-size="10.5" font-family="system-ui,sans-serif">kurum ağı</text>
+
+        <line x1="168" y1="170" x2="222" y2="170" stroke="#48e58d" stroke-width="2" marker-end="url(#ar)"/>
+        <text x="195" y="160" text-anchor="middle" fill="#6e837a" font-size="10" font-family="system-ui,sans-serif">TLS</text>
+
+        <!-- sunucu sinir -->
+        <rect x="232" y="40" width="500" height="262" rx="20" fill="rgba(72,229,141,.04)" stroke="url(#gl)" stroke-width="2" stroke-dasharray="7 5"/>
+        <text x="482" y="68" text-anchor="middle" fill="#b9f33d" font-size="12.5" font-weight="700" letter-spacing="1.6" font-family="system-ui,sans-serif">KENDİ SUNUCUNUZ</text>
+
+        <rect x="258" y="88" width="200" height="66" rx="13" fill="#071815" stroke="#183b31"/>
+        <text x="358" y="114" text-anchor="middle" fill="#f4f7f4" font-size="13.5" font-weight="600" font-family="system-ui,sans-serif">Web arayüzü</text>
+        <text x="358" y="134" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">27 ekran ve panel</text>
+
+        <rect x="258" y="186" width="200" height="82" rx="13" fill="#071815" stroke="#183b31"/>
+        <text x="358" y="212" text-anchor="middle" fill="#f4f7f4" font-size="13.5" font-weight="600" font-family="system-ui,sans-serif">Gateway API</text>
+        <text x="358" y="232" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">ELVIO · yetkilendirme</text>
+        <text x="358" y="250" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">denetim kaydı</text>
+
+        <line x1="358" y1="154" x2="358" y2="182" stroke="#48e58d" stroke-width="2" marker-end="url(#ar)"/>
+
+        <rect x="500" y="88" width="206" height="82" rx="13" fill="#071815" stroke="#183b31"/>
+        <text x="603" y="114" text-anchor="middle" fill="#f4f7f4" font-size="13.5" font-weight="600" font-family="system-ui,sans-serif">PostgreSQL + pgvector</text>
+        <text x="603" y="134" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">belgeler · hafıza</text>
+        <text x="603" y="152" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">anlam araması</text>
+
+        <rect x="500" y="196" width="206" height="72" rx="13" fill="#071815" stroke="#183b31"/>
+        <text x="603" y="222" text-anchor="middle" fill="#f4f7f4" font-size="13.5" font-weight="600" font-family="system-ui,sans-serif">Dil modeli</text>
+        <text x="603" y="242" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">yerel ya da kurumsal</text>
+        <text x="603" y="258" text-anchor="middle" fill="#8fa59b" font-size="11" font-family="system-ui,sans-serif">çıkarım sunucusu</text>
+
+        <line x1="462" y1="212" x2="496" y2="140" stroke="#48e58d" stroke-width="2" marker-end="url(#ar)"/>
+        <line x1="462" y1="228" x2="496" y2="228" stroke="#48e58d" stroke-width="2" marker-end="url(#ar)"/>
+
+        <!-- disari cikmayan veri -->
+        <line x1="740" y1="170" x2="790" y2="170" stroke="#ff7b7b" stroke-width="2" stroke-dasharray="6 5" opacity=".6"/>
+        <circle cx="812" cy="170" r="17" fill="rgba(255,123,123,.08)" stroke="#ff7b7b" stroke-width="1.6"/>
+        <line x1="805" y1="163" x2="819" y2="177" stroke="#ff7b7b" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="819" y1="163" x2="805" y2="177" stroke="#ff7b7b" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="840" y="160" fill="#ff9b9b" font-size="11.5" font-weight="600" font-family="system-ui,sans-serif">Üçüncü taraf</text>
+        <text x="840" y="176" fill="#ff9b9b" font-size="11.5" font-weight="600" font-family="system-ui,sans-serif">bulut</text>
+        <text x="840" y="194" fill="#6e837a" font-size="10.5" font-family="system-ui,sans-serif">veri gitmez</text>
+      </svg>
+      <p class="arch-note">
+        Şemadaki tek zorunlu dış bağlantı yoktur: kurulum tamamlandıktan sonra sistem internet
+        erişimi olmayan bir ağda da çalışır. Web araması gibi dışarıya çıkan özellikler isteğe
+        bağlıdır ve kapatılabilir.
+      </p>
+    </div>
+
+    <ol class="steps">
+      <li><b>Sunucuyu hazırlayın</b>Kendi sunucunuz, kurum içi bir makine ya da kiraladığınız bir VPS olabilir. Konteyner tabanlı kurulum kullanılır.</li>
+      <li><b>Servisleri ayağa kaldırın</b>Uygulama, veritabanı ve model servisleri tek bir yapılandırma dosyasıyla başlatılır. Yazılı kurulum, yedekleme ve geri yükleme dokümanları verilir.</li>
+      <li><b>Modeli seçin</b>Kendi sunucunuzda yerel bir model, kurumsal bir çıkarım sunucusu ya da uyumlu bir API — tek ayar değişir, uygulama aynı kalır.</li>
+      <li><b>Ekibi davet edin</b>Roller ve yetkiler tanımlanır, belgeler yüklenir, ELVIO kurumun birikimi üzerinden çalışmaya başlar.</li>
+    </ol>
+  </div>
+</section>
+
 <section id="kitle">
   <div class="wrap">
     <p class="eyebrow">Kimin için</p>
@@ -328,6 +571,106 @@ footer a{color:var(--muted)}
   </div>
 </section>
 
+<section id="sss">
+  <div class="wrap">
+    <p class="eyebrow">Sık sorulanlar</p>
+    <h2>Kurulumdan önce en çok sorulanlar</h2>
+    <p class="sub">Aşağıdaki yanıtlar bugünkü durumu yansıtır. Emin olmadığımız yerlerde
+    "henüz netleşmedi" yazmayı, iyimser bir tahmin vermeye tercih ediyoruz.</p>
+
+    <div class="faq">
+      <details open>
+        <summary>Verilerim gerçekten dışarı çıkmıyor mu?</summary>
+        <div class="ans">
+          <p>Evet. Uygulama, veritabanı ve dil modeli sizin sunucunuzda çalışır; belgeleriniz ve
+          sohbetleriniz o sunucudan ayrılmaz. Bize herhangi bir telemetri veya kullanım verisi
+          göndermez.</p>
+          <p>Tek istisna, sizin bilinçli olarak açtığınız dış özelliklerdir — örneğin web araması
+          ya da dışarıdaki bir model API'si seçmeniz. Bunlar isteğe bağlıdır ve kapatılabilir;
+          kapalıyken sistem internet erişimi olmayan bir ağda çalışır.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Ne kadar donanım gerekiyor?</summary>
+        <div class="ans">
+          <p>Uygulamanın kendisi mütevazıdır: birkaç çekirdek ve 8 GB bellek küçük bir ekip için
+          yeterlidir. Belirleyici olan, modeli nerede çalıştırdığınızdır.</p>
+          <p>Modeli kendi sunucunuzda çalıştıracaksanız ekran kartı belleği asıl kısıttır; küçük
+          modeller işlemcide de çalışır ama yanıtlar yavaşlar. Kurumsal bir çıkarım sunucusuna ya da
+          uyumlu bir API'ye bağlanırsanız QEVANTIS'in çalıştığı makinenin gereksinimi düşer.
+          Kesin rakamları kapalı beta ölçümlerinden sonra yayımlayacağız.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Hangi dil modelleri destekleniyor?</summary>
+        <div class="ans">
+          <p>Mimari modelden bağımsızdır. Kendi sunucunuzda çalışan yerel modeller, kurumsal bir
+          çıkarım sunucusu ya da uyumlu bir API — hangisini seçerseniz tek ayar değişir, uygulamanın
+          kendisi aynı kalır. Model sağlayıcısını sonradan değiştirmek veri taşımayı gerektirmez.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>KVKK ve GDPR açısından ne sağlıyor?</summary>
+        <div class="ans">
+          <p>Veriyi kendi sunucunuzda tuttuğunuzda yurt dışına aktarım sorunu baştan ortadan kalkar;
+          bu, bulut araçlarında en çok tıkanılan noktadır.</p>
+          <p>Ürünün içinde ayrıca veri dışa aktarma, hesabın ve tüm verisinin kalıcı silinmesi,
+          sürüm takipli açık rıza kaydı ve denetim günlüğü bulunur. Bunlar sonradan eklenmiş bir
+          uyum katmanı değil, veri modelinin parçasıdır. Kurulumun kendi hukuki değerlendirmesi
+          elbette sizin sorumluluğunuzdadır; gerekli teknik dayanağı sağlıyoruz.</p>
+          <p>Şeffaflık için: beta süresince <em>bizim işlettiğimiz</em> deneme ortamı Almanya'daki
+          sunucumuzda çalışıyor, dolayısıyla o ortamı kullanmak yurt dışına aktarım anlamına gelir.
+          Kendi sunucunuza kurarsanız bu aktarım hiç doğmaz. Ayrıntısı gizlilik metninde.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Kurulumu kim yapıyor, ne kadar sürüyor?</summary>
+        <div class="ans">
+          <p>Konteyner tabanlı kurulum, sunucu yönetimine hâkim bir kişi için tek oturumda
+          tamamlanacak şekilde tasarlandı; yazılı kurulum, yedekleme ve geri yükleme dokümanları
+          veriliyor. Kurumsal lisansta kurulum ve destek paketi bizim tarafımızdan sağlanıyor.</p>
+          <p>Kapalı beta katılımcıları isterse kendi sunucularına kurar, isterse bizim işlettiğimiz
+          beta ortamını kullanır.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Fiyatı ne olacak?</summary>
+        <div class="ans">
+          <p>Kapalı beta ücretsizdir. Abonelik ve ödeme altyapısı üründe kodlanmış durumda ancak
+          bilinçli olarak devreye alınmadı; rakamları beta sonrası gerçek kullanım verisiyle
+          netleştireceğiz. Bireysel kullanım için ücretsiz bir katman kalıcı olarak açık kalacak.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Ürün hangi olgunlukta? Üretimde kullanabilir miyim?</summary>
+        <div class="ans">
+          <p>Hesap ve kimlik, çalışma alanı ve yetkilendirme, güvenlik ve yönetim tarafı üretim
+          seviyesinde ve test edilmiş durumda. ELVIO sohbeti, bilgi getirimi, geliştirici API'si ve
+          web uygulaması beta seviyesinde — çalışıyor, üzerinde iyileştirme sürüyor. Mobil uygulama
+          alfa aşamasında.</p>
+          <p>Yukarıdaki tabloda bunu olduğundan iyi göstermeden veriyoruz. Beta ortamına kaybı
+          telafi edilemeyecek üretim verisi yüklemenizi bu aşamada önermiyoruz.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Kaynak kodu açık mı?</summary>
+        <div class="ans">
+          <p>Hayır. QEVANTIS tescilli lisansla dağıtılan, kendi sunucunuza kurulan bir üründür.
+          "Kendi sunucunuzda çalışır" ile "açık kaynak" farklı şeylerdir; biz birincisini
+          taahhüt ediyoruz — veri sizin altyapınızda kalır.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="beta">
   <div class="wrap">
     <p class="eyebrow">Kapalı beta</p>
@@ -344,7 +687,7 @@ footer a{color:var(--muted)}
         hangi işte kullanmayı düşündüğünüzü yazmanız yeterli.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:mutlukaraoglan4@gmail.com?subject=QEVANTIS%20kapal%C4%B1%20beta%20davet%20listesi&amp;body=Merhaba%2C%0A%0AQEVANTIS%20kapal%C4%B1%20betas%C4%B1na%20kat%C4%B1lmak%20istiyorum.%0A%0AKim%20oldu%C4%9Fum%3A%20%0AHangi%20i%C5%9Fte%20kullanmay%C4%B1%20d%C3%BC%C5%9F%C3%BCn%C3%BCyorum%3A%20%0A">Davet listesine katıl</a>
+        <a class="btn btn-primary" href="mailto:info@qevantis.com?subject=QEVANTIS%20kapal%C4%B1%20beta%20davet%20listesi&amp;body=Merhaba%2C%0A%0AQEVANTIS%20kapal%C4%B1%20betas%C4%B1na%20kat%C4%B1lmak%20istiyorum.%0A%0AKim%20oldu%C4%9Fum%3A%20%0AHangi%20i%C5%9Fte%20kullanmay%C4%B1%20d%C3%BC%C5%9F%C3%BCn%C3%BCyorum%3A%20%0A">Davet listesine katıl</a>
         <a class="btn btn-ghost" href="demo.html">Önce arayüzü gez</a>
       </div>
     </div>
@@ -361,7 +704,8 @@ footer a{color:var(--muted)}
     </div>
     <div>
       <div><a href="demo.html">Arayüz önizlemesi</a> · örnek verilerle</div>
-      <div style="margin-top:8px"><a href="mailto:mutlukaraoglan4@gmail.com">İletişim</a></div>
+      <div style="margin-top:8px"><a href="mailto:info@qevantis.com">İletişim</a></div>
+      <div style="margin-top:8px"><a href="gizlilik.html">Gizlilik ve KVKK</a> · <a href="kosullar.html">Kullanım şartları</a></div>
       <div style="margin-top:8px">© 2026 QEVANTIS</div>
     </div>
   </div>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="QEVANTIS">
+  <defs>
+    <linearGradient id="q" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9f33d"/><stop offset="1" stop-color="#48e58d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#030b0d"/>
+  <rect x="1.25" y="1.25" width="61.5" height="61.5" rx="14" fill="none" stroke="#183b31" stroke-width="2.5"/>
+  <circle cx="32" cy="30" r="13.5" fill="none" stroke="url(#q)" stroke-width="6"/>
+  <rect x="38" y="36" width="6" height="15" rx="3" fill="url(#q)" transform="rotate(-42 41 43.5)"/>
+</svg>
